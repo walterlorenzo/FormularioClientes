@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            background: linear-gradient(to right, #55cc52, #5cc7e3);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+        }
+
+        fieldset {
+            border: 3px solid #55cc52;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        legend {
+            border: 1px solid #55cc52;
+            padding: 10px;
+            text-align: center;
+            background: linear-gradient(to right, #55cc52, #5cc7e3);
+            border-radius: 8px;
+            color: #fff;
+        }
+
+        .inputBox {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .inputUser {
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+        }
+
+        .labelInput {
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            transition: .5s;
+            color: #55cc52;
+        }
+
+        .inputUser:focus ~ .labelInput,
+        .inputUser:valid ~ .labelInput {
+            top: -20px;
+            font-size: 12px;
+            color: #55cc52;
+        }
+
+        #data_nascimento {
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+        }
+
+        #submit {
+            background: linear-gradient(to right, #55cc52, #5cc7e3);
+            width: 100%;
+            border: none;
+            padding: 15px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+
+        #submit:hover {
+            background: linear-gradient(to right, #4aae48, #4bbfdf);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <legend><b>Formulário de Clientes</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput">Nome Completo</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="email" id="email" class="inputUser" required>
+                    <label for="email" class="labelInput">Email</label>
+                </div>
+                <div class="inputBox">
+                    <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+                    <label for="telefone" class="labelInput">Telefone</label>
+                </div>
+                <p>Gênero:</p>
+                <input type="radio" id="feminino" name="genero" value="feminino" required>
+                <label for="feminino">Feminino</label>
+                <br>
+                <input type="radio" id="masculino" name="genero" value="masculino" required>
+                <label for="masculino">Masculino</label>
+                <br>
+                <input type="radio" id="nao-binario" name="genero" value="nao-binario" required>
+                <label for="nao-binario">Não-binário</label>
+                <br>
+                <input type="radio" id="outro" name="genero" value="outro" required>
+                <label for="outro">Outro</label>
+                <br>
+                <label for="data_nascimento"><b>Data de Nascimento:</b></label>
+                <input type="date" name="data_nascimento" id="data_nascimento" required>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="cidade" id="cidade" class="inputUser" required>
+                    <label for="cidade" class="labelInput"><b>Cidade</b></label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="estado" id="estado" class="inputUser" required>
+                    <label for="estado" class="labelInput"><b>Estado</b></label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="endereco" id="endereco" class="inputUser" required>
+                    <label for="endereco" class="labelInput"><b>Endereço</b></label>
+                </div>
+                <input type="submit" name="submit" id="submit">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
